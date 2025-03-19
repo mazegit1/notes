@@ -30,12 +30,10 @@ function App() {
 
   return (
     <div className="flex h-screen">
-      {/* Sol Sidebar */}
       <Sidebar setView={setView} />
 
-      {/* Sağ Content with Animation */}
       <motion.div
-  className="flex-1 p-6 overflow-y-auto" // Scrollable area for notes
+  className="flex-1 p-6 overflow-y-auto" 
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   exit={{ opacity: 0 }}

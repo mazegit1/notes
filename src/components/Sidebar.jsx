@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Sidebar = ({ setView }) => {
   return (
     <motion.div
-      className="w-64 h-screen bg-blue-700 text-white p-5"
+      className="xl:w-64 md:w-44 w-20 h-screen bg-blue-800 text-white p-5"
       initial={{ x: -300 }}
       animate={{ x: 0 }}
       exit={{ x: -300 }}
@@ -13,13 +13,13 @@ const Sidebar = ({ setView }) => {
       <nav>
         <button
           onClick={() => setView("all")}
-          className="block shadow-md w-full text-left p-2 mb-2 hover:scale-105 cursor-pointer bg-gray-700 rounded hover:bg-gray-600"
+          className="block shadow-md w-full text-left p-2 mb-2 border border-black cursor-pointer bg-black rounded hover:bg-white hover:text-black text-white transition-all ease-in-out duration-200"
         >
           📜 Bütün Notlar
         </button>
         <button
           onClick={() => setView("add")}
-          className="block shadow-md w-full text-left p-2 mb-2 hover:scale-105 cursor-pointer bg-gray-700 rounded hover:bg-gray-600"
+          className="block shadow-md w-full text-left p-2 mb-2 border border-black cursor-pointer bg-black rounded hover:bg-white hover:text-black text-white transition-all ease-in-out duration-200"
         >
           ➕ Yeni Not Əlavə Et
         </button>
