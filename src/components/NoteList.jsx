@@ -19,7 +19,7 @@ const NoteList = ({ notes, setView, setSelectedNote, deleteNote }) => {
         onChange={(e) => setSearch(e.target.value)}
       />
       <ul>
-        <div className="notes grid grid-cols-4 gap-4">
+        <div className="notes grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
           {filteredNotes.map((note) => (
             <motion.li
               key={note.id}

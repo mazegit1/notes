@@ -35,16 +35,17 @@ function App() {
 
       {/* Sağ Content with Animation */}
       <motion.div
-        className="flex-1 p-6"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        {view === "all" && <NoteList notes={notes} setView={setView} setSelectedNote={setSelectedNote} deleteNote={deleteNote} />}
-        {view === "add" && <NoteForm onSave={addNote} />}
-        {view === "edit" && selectedNote && <NoteForm note={selectedNote} onSave={updateNote} />}
-      </motion.div>
+  className="flex-1 p-6 overflow-y-auto" // Scrollable area for notes
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  exit={{ opacity: 0 }}
+  transition={{ duration: 0.5 }}
+>
+  {view === "all" && <NoteList notes={notes} setView={setView} setSelectedNote={setSelectedNote} deleteNote={deleteNote} />}
+  {view === "add" && <NoteForm onSave={addNote} />}
+  {view === "edit" && selectedNote && <NoteForm note={selectedNote} onSave={updateNote} />}
+</motion.div>
+
     </div>
   );
 }
